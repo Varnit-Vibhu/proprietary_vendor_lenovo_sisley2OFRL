@@ -1,2 +1,1 @@
-Vendor blobs for Lenovo K3-Note
-From: VIBEUI_3.5_1631 build
+Vendor blobs for Lenovo Vibe S1 (sisley2OFRL)

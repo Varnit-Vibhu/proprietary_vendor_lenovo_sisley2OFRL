@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),aio_otfp)
+ifeq ($(TARGET_DEVICE),sisley2OFRL)
 
 ifeq ($(USE_MTK_CAMERA_WRAPPER),true)
 include $(CLEAR_VARS)
@@ -35,6 +35,15 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libdpframework
 LOCAL_SRC_FILES_64 := proprietary/lib64/libdpframework.so
 LOCAL_SRC_FILES_32 := proprietary/lib/libdpframework.so
+LOCAL_MULTILIB := both
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libion_mtk
+LOCAL_SRC_FILES_64 := proprietary/lib64/libion_mtk.so
+LOCAL_SRC_FILES_32 := proprietary/lib/libion_mtk.so
 LOCAL_MULTILIB := both
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
